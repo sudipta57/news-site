@@ -1,0 +1,53 @@
+/* Hides scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Keyframe animation for smooth, continuous scrolling */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.headline-slider {
+  animation: slide 50s linear infinite;
+  display: inline-flex;
+}
+
+.headline-slider:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .headline-slider {
+    animation: slide 45s linear infinite; /* Adjust speed for smaller screens */
+  }
+}
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
