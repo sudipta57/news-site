@@ -211,7 +211,7 @@ const BlankComponent = () => {
   return (
     <div className="flex justify-center items-center bg-gray-100 h-full">
       <iframe
-        src="http://localhost:5173/" // URL of the website
+        src="https://news-site-indol.vercel.app/" // URL of the website
         title="secwebxperts"
         className="w-full h-full" // Adjust dimensions as needed
         style={{ border: "none" }}
